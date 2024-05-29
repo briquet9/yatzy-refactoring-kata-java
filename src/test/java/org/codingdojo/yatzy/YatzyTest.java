@@ -44,6 +44,6 @@ class YatzyTest {
     })
     void testYatzy(int expected, String categoryName, int d1, int d2, int d3, int d4, int d5) {
         Category category = Category.valueOf(categoryName);
-        assertEquals(expected, YatziManager.computeScore(category, new Combination(d1, d2, d3, d4, d5)));
+        assertEquals(expected, category.computeScore(new Combination(d1, d2, d3, d4, d5)));
     }
 }
