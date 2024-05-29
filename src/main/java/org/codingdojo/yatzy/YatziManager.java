@@ -4,6 +4,7 @@ import org.codingdojo.yatzy.computer.ChanceComputer;
 import org.codingdojo.yatzy.computer.FrequencyComputer;
 import org.codingdojo.yatzy.computer.NumberComputer;
 import org.codingdojo.yatzy.computer.ScoreComputer;
+import org.codingdojo.yatzy.computer.TwoPairsComputer;
 import org.codingdojo.yatzy.computer.YatziComputer;
 
 public class YatziManager {
@@ -21,7 +22,7 @@ public class YatziManager {
             case FIVES -> new NumberComputer(5);
             case SIXES -> new NumberComputer(6);
             case ONE_PAIR -> new FrequencyComputer(2);
-            case TWO_PAIRS -> null;
+            case TWO_PAIRS -> new TwoPairsComputer();
             case THREE_OF_A_KIND -> new FrequencyComputer(3);
             case FOUR_OF_A_KIND -> new FrequencyComputer(4);
             case SMALL_STRAIGHT -> null;
