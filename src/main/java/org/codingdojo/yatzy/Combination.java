@@ -19,6 +19,7 @@ public class Combination {
         dices.add(d3);
         dices.add(d4);
         dices.add(d5);
+        checkValues();
     }
 
     public Map<Integer, Integer> getFrequencies() {
@@ -35,4 +36,11 @@ public class Combination {
         return dices.stream().reduce(0, Integer::sum);
     }
 
+    private void checkValues() {
+        for (int dice : dices) {
+            if (dice < 1 || dice > 6) {
+                throw new IllegalArgumentException("The dice value must be between 1 and 6.");
+            }
+        }
+    }
 }
