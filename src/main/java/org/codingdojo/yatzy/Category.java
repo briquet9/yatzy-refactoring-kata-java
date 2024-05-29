@@ -1,6 +1,6 @@
 package org.codingdojo.yatzy;
 
-public enum YatzyCategory {
+public enum Category {
     
     // Upper section
     ONES,

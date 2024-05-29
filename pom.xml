@@ -10,8 +10,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.jupiter.version>5.9.2</junit.jupiter.version>
+        <lombook.version>1.18.32</lombook.version>
     </properties>
-
 
     <dependencies>
         <dependency>
@@ -36,6 +36,12 @@
             <groupId>com.approvaltests</groupId>
             <artifactId>approvaltests</artifactId>
             <version>18.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombook.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
     <build>

@@ -17,7 +17,7 @@ public class YatzyTest {
         "0, 6, 2, 2, 4, 5",
         "4, 1, 2, 1, 1, 1"})
     public void testOnes(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, Yatzy.ones(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.ONES, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -25,7 +25,7 @@ public class YatzyTest {
         "4, 1, 2, 3, 2, 6",
         "10, 2, 2, 2, 2, 2"})
     public void testTwos(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, Yatzy.twos(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.TWOS, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -33,7 +33,7 @@ public class YatzyTest {
         "6, 1, 2, 3, 2, 3",
         "12, 2, 3, 3, 3, 3"})
     public void testThrees(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, Yatzy.threes(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.THREES, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -42,7 +42,7 @@ public class YatzyTest {
         "8, 4, 4, 5, 5, 5",
         "4, 4, 5, 5, 5, 5"})
     public void testFours(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).fours());
+        assertEquals(expected, YatziManager.computeScore(Category.FOURS, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -51,7 +51,7 @@ public class YatzyTest {
         "15, 4, 4, 5, 5, 5",
         "20, 4, 5, 5, 5, 5"})
     public void testFives(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).fives());
+        assertEquals(expected, YatziManager.computeScore(Category.FIVES, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -60,7 +60,7 @@ public class YatzyTest {
         "6, 4, 4, 6, 5, 5",
         "18, 6, 5, 6, 6, 5"})
     public void testSixes(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, new Yatzy(d1, d2, d3, d4, d5).sixes());
+        assertEquals(expected, YatziManager.computeScore(Category.SIXES, new Combination(d1, d2, d3, d4, d5)));
     }
 
 
