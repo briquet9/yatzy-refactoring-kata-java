@@ -3,14 +3,14 @@ package org.codingdojo.yatzy;
 import lombok.Getter;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Getter
 public class Combination {
 
-    private List<Integer> dices;
+    private Collection<Integer> dices;
 
     public Combination(int d1, int d2, int d3, int d4, int d5) {
         dices = new ArrayList<>();
