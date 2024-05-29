@@ -1,7 +1,9 @@
 package org.codingdojo.yatzy;
 
+import org.codingdojo.yatzy.computer.ChanceComputer;
 import org.codingdojo.yatzy.computer.NumberComputer;
 import org.codingdojo.yatzy.computer.ScoreComputer;
+import org.codingdojo.yatzy.computer.YatziComputer;
 
 public class YatziManager {
 
@@ -24,8 +26,8 @@ public class YatziManager {
             case SMALL_STRAIGHT -> null;
             case LARGE_STRAIGHT -> null;
             case FULL_HOUSE -> null;
-            case CHANCE -> null;
-            case YATZY -> null;
+            case CHANCE -> new ChanceComputer();
+            case YATZY -> new YatziComputer();
         };
     }
 

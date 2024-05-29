@@ -132,7 +132,7 @@ public class YatzyTest {
         "15, 2, 3, 4, 5, 1",
         "16, 3, 3, 4, 5, 1"})
     public void testChance(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, Yatzy.chance(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.CHANCE, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -140,6 +140,6 @@ public class YatzyTest {
         "50, 4, 4, 4, 4, 4",
         "0, 6, 6, 6, 6, 3"})
     public void testYatzy(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, Yatzy.yatzy(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.YATZY, new Combination(d1, d2, d3, d4, d5)));
     }
 }
