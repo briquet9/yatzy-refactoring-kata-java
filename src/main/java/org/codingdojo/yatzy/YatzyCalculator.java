@@ -1,4 +1,4 @@
-package org.codingdojo;
+package org.codingdojo.yatzy;
 
 import java.util.List;
 

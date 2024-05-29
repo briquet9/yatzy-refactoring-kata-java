@@ -1,4 +1,4 @@
-package org.codingdojo;
+package org.codingdojo.yatzy;
 
 public enum YatzyCategory {
     CHANCE, YATZY,
