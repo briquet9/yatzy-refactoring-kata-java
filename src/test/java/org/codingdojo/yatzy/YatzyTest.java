@@ -8,22 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class YatzyTest {
 
-    @Test
-    public void chance_scores_sum_of_all_dice() {
-        int expected = 15;
-        int actual = Yatzy.chance(2, 3, 4, 5, 1);
-        assertEquals(expected, actual);
-        assertEquals(16, Yatzy.chance(3, 3, 4, 5, 1));
-    }
 
-    @Test
-    public void yatzy_scores_50() {
-        int expected = 50;
-        int actual = Yatzy.yatzy(4, 4, 4, 4, 4);
-        assertEquals(expected, actual);
-        assertEquals(50, Yatzy.yatzy(6, 6, 6, 6, 6));
-        assertEquals(0, Yatzy.yatzy(6, 6, 6, 6, 3));
-    }
+    // Upper section
 
     @Test
     public void test_1s() {
@@ -65,6 +51,9 @@ public class YatzyTest {
         assertEquals(6, new Yatzy(4, 4, 6, 5, 5).sixes());
         assertEquals(18, new Yatzy(6, 5, 6, 6, 5).sixes());
     }
+
+
+    // Lower section
 
     @Test
     public void one_pair() {
@@ -111,5 +100,22 @@ public class YatzyTest {
     public void fullHouse() {
         assertEquals(18, Yatzy.fullHouse(6, 2, 2, 2, 6));
         assertEquals(0, Yatzy.fullHouse(2, 3, 4, 5, 6));
+    }
+
+    @Test
+    public void chance_scores_sum_of_all_dice() {
+        int expected = 15;
+        int actual = Yatzy.chance(2, 3, 4, 5, 1);
+        assertEquals(expected, actual);
+        assertEquals(16, Yatzy.chance(3, 3, 4, 5, 1));
+    }
+
+    @Test
+    public void yatzy_scores_50() {
+        int expected = 50;
+        int actual = Yatzy.yatzy(4, 4, 4, 4, 4);
+        assertEquals(expected, actual);
+        assertEquals(50, Yatzy.yatzy(6, 6, 6, 6, 6));
+        assertEquals(0, Yatzy.yatzy(6, 6, 6, 6, 3));
     }
 }
