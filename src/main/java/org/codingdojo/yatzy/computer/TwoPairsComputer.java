@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 /**
  * - If there are 2 distinct pairs in a combination, scores the sums of these pairs
- * - Otherwise: 0
+ * - Else: 0
  */
 public class TwoPairsComputer implements ScoreComputer {
 

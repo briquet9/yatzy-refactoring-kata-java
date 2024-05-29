@@ -108,7 +108,7 @@ public class YatzyTest {
         "15, 2, 3, 4, 5, 1",
         "0, 1, 2, 2, 4, 5"})
     public void testSmallStraight(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, Yatzy.smallStraight(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.SMALL_STRAIGHT, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -117,15 +117,16 @@ public class YatzyTest {
         "20, 2, 3, 4, 5, 6",
         "0, 1, 2, 2, 4, 5"})
     public void testLargeStraight(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, Yatzy.largeStraight(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.LARGE_STRAIGHT, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
     @CsvSource({
         "18, 6, 2, 2, 2, 6",
-        "0, 2, 3, 4, 5, 6"})
+        "0, 2, 3, 4, 5, 6",
+        "0, 4, 4, 4, 4, 4"})
     public void testFullHouse(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, Yatzy.fullHouse(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.FULL_HOUSE, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest

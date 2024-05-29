@@ -9,13 +9,13 @@ import java.util.Map;
 /**
  * - If a dice number occurs at a minimum expected frequency,
  * the score is the multiplication: dice number x minimum frequency
- * - Otherwise: the score is 0.
+ * - Else: the score is 0.
  */
 @AllArgsConstructor
 public class FrequencyComputer implements ScoreComputer {
 
     private int frequency;
-    
+
     @Override
     public int computeScore(Combination combination) {
         return combination.getFrequencies().entrySet().stream()

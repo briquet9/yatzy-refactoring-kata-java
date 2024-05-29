@@ -2,8 +2,10 @@ package org.codingdojo.yatzy;
 
 import org.codingdojo.yatzy.computer.ChanceComputer;
 import org.codingdojo.yatzy.computer.FrequencyComputer;
+import org.codingdojo.yatzy.computer.FullHouseComputer;
 import org.codingdojo.yatzy.computer.NumberComputer;
 import org.codingdojo.yatzy.computer.ScoreComputer;
+import org.codingdojo.yatzy.computer.StraightComputer;
 import org.codingdojo.yatzy.computer.TwoPairsComputer;
 import org.codingdojo.yatzy.computer.YatziComputer;
 
@@ -25,9 +27,9 @@ public class YatziManager {
             case TWO_PAIRS -> new TwoPairsComputer();
             case THREE_OF_A_KIND -> new FrequencyComputer(3);
             case FOUR_OF_A_KIND -> new FrequencyComputer(4);
-            case SMALL_STRAIGHT -> null;
-            case LARGE_STRAIGHT -> null;
-            case FULL_HOUSE -> null;
+            case SMALL_STRAIGHT -> new StraightComputer(1);
+            case LARGE_STRAIGHT -> new StraightComputer(6);
+            case FULL_HOUSE -> new FullHouseComputer();
             case CHANCE -> new ChanceComputer();
             case YATZY -> new YatziComputer();
         };

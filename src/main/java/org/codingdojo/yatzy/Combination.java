@@ -30,4 +30,9 @@ public class Combination {
 
         return frequencies;
     }
+
+    public int sum() {
+        return dices.stream().reduce(0, Integer::sum);
+    }
+
 }

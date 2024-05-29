@@ -4,7 +4,7 @@ import org.codingdojo.yatzy.Combination;
 
 /**
  * - If a same dice number occurs 5 times, then the score is 50.
- * - Otherwise: 0
+ * - Else: 0
  */
 public class YatziComputer implements ScoreComputer {
 
