@@ -13,12 +13,9 @@ public class NumberComputer implements ScoreComputer {
 
     @Override
     public int computeScore(Combination combination) {
-        int sum = 0;
-        for (int dice : combination.getDices()) {
-            if (dice == number) {
-                sum += number;
-            }
-        }
-        return sum;
+        return combination
+            .getDices()
+            .stream()
+            .reduce(0, (sum, dice) -> dice == number ? sum + number : sum);
     }
 }
