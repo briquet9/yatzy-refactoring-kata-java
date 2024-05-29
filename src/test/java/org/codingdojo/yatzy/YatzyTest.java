@@ -72,7 +72,7 @@ public class YatzyTest {
         "10, 5, 3, 3, 3, 5",
         "12, 5, 3, 6, 6, 5"})
     public void testOnePairs(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, new Yatzy().score_pair(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.ONE_PAIR, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -90,7 +90,7 @@ public class YatzyTest {
         "9, 3, 3, 3, 3, 5",
         "9, 3, 3, 3, 3, 3"})
     public void testThreeOfAKind(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, Yatzy.three_of_a_kind(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.THREE_OF_A_KIND, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
@@ -98,7 +98,7 @@ public class YatzyTest {
         "12, 3, 3, 3, 3, 5",
         "20, 5, 5, 5, 4, 5"})
     public void testFourOfAKind(int expected, int d1, int d2, int d3, int d4, int d5) {
-        assertEquals(expected, Yatzy.four_of_a_kind(d1, d2, d3, d4, d5));
+        assertEquals(expected, YatziManager.computeScore(Category.FOUR_OF_A_KIND, new Combination(d1, d2, d3, d4, d5)));
     }
 
     @ParameterizedTest
