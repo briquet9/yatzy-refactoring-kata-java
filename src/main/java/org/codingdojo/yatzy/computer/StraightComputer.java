@@ -15,16 +15,15 @@ public class StraightComputer implements ScoreComputer {
 
     @Override
     public int computeScore(Combination combination) {
-        if (isStraight(combination) && combination.getDices().contains(includedValue)) {
+        if (eachNumberOccursOnce(combination) && combination.getDices().contains(includedValue)) {
             return combination.sum();
         }
         return 0;
     }
 
-    private boolean isStraight(Combination combination) {
+    private boolean eachNumberOccursOnce(Combination combination) {
         return combination.getFrequencies().entrySet().stream()
             .filter(e -> e.getValue() == 1)
             .count() == 5;
     }
 }
-
