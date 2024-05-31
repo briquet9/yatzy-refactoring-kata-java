@@ -23,7 +23,6 @@ public class StraightComputer implements ScoreComputer {
 
     private boolean eachNumberOccursOnce(Combination combination) {
         return combination.getFrequencies().entrySet().stream()
-            .filter(e -> e.getValue() == 1)
-            .count() == 5;
+            .allMatch(e -> e.getValue() == 1);
     }
 }
